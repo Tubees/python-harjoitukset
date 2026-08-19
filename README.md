@@ -26,5 +26,14 @@ tehtävä 6 kesken ja projekti
 
 ## moduuli 5
 
+1,2,3, 4
+
+## moduuli 6
+
+Ten tehtävät 1, 2, 3, 4, 5
+
+tehtävä 6 kesken ja projekti
+
+## moduuli 7
 
 
