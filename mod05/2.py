@@ -1,9 +1,10 @@
-list = []
+tuuma = float(2.54)
 while True:
-    luku = input("Anna luku: ")
-    if luku == "":
-        list.sort(reverse=True)
-        print(list[:5])
-        break
-    luku = float(luku)
-    list.append(luku)
+    luku = int(input("Anna luku: "))
+    if luku <0:
+        print("negatiiviinen luk")
+
+        break 
+
+    else: 
+        print(str(luku )+ "tuumaa on : " + (str(luku * tuuma) + "cm"))

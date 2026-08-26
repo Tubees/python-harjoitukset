@@ -1,18 +1,18 @@
-pienin = None
-suurin = None
-luku = None
-
-while True:
-    
-    luku = input("Luku: ")
-    if luku == "":
-        print("Tyhjä")
-        print("suurin " + str(suurin))
-        print("pienin " + str(pienin))
-        break
-    luku = float(luku)
-    if suurin is None or luku > suurin:
-        suurin = luku
-    if pienin is None or luku < pienin:
-        pienin = luku
-    
+sukupuoli = input("Anna sukupuoli (mies/nainen): ")
+hg = float(input("Hemoglobiini: "))
+if sukupuoli == "nainen":
+    if hg < 117:
+        print("hemoglobiini alhainen")
+    elif hg > 175:
+        print("hemoglobiini korkea")
+    else:
+        print("hemoglobiini normaali")
+elif sukupuoli == "mies":
+    if hg < 134:
+        print("hemoglobiini alhainen")
+    elif hg > 195:
+        print("hemoglobiini korkea")
+    else:
+        print("hemoglobiini normaali")
+else:
+    print("?")

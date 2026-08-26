@@ -1,6 +1,6 @@
 
 nimi = input("Syötä nimi: ")
-ikä = input("Syötä ikä: ")
+ikä = int(input("Syötä ikä: "))
 
 print("Nimi: " + nimi)
-print("Ikä: " + ikä)
+print("Ikä: " + str(ikä))

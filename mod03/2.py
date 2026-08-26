@@ -1,14 +1,7 @@
-luokka = input("Anna luokka: ")
-if luokka == "LUX":
-    print("LUX on parvekkeellinen hytti yläkannella.")
+import math
 
-elif luokka == "A":
-    print("A on ikkunallinen hytti autokannen yläpuolella.")
+säde = input("Anna säde: ")
+pa = math.pi * float(säde) ** 2
 
-elif luokka == "B":
-    print("B on ikkunaton hytti autokannen yläpuolella.")
 
-elif luokka == "C":
-    print("C on ikkunaton hytti autokannen alapuolella.")
-else:
-    print("Virheellinen hyttiluokka")
+print("Ympyrän pinta-ala on: " + str(pa))

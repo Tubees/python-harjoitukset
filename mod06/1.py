@@ -1,11 +1,11 @@
 import random
 
-def noppa():
-    return random.randint(1, 6)
+kuutiot = int(input("Anna luku: "))
+sum = 0
 
-while True:
-    nop = noppa()
-    print(nop)
-    if nop == 6:
-        break
+for i in range(1, kuutiot + 1 ):
+    x = random.randint(1, 6)
+    print("Kuutio " + str(i) + " on: " + str(x))
+    sum += x
 
+print("Summa on : " + str(sum))

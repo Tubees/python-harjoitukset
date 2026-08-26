@@ -1,11 +1,18 @@
-luku = int(input("Luku:"))
-if luku < 2:
-    print("Luku ei ole alkuluku")
-else:
-    for i in range(1, luku + 1):
-        if luku % i == 0 and i != 1 and i != luku:
+pienin = None
+suurin = None
+luku = None
 
-            print("Luku ei ole alkuluku")
-            break
-    else:
-        print("Luku on alkuluku")
+while True:
+    
+    luku = input("Luku: ")
+    if luku == "":
+        print("Tyhjä")
+        print("suurin " + str(suurin))
+        print("pienin " + str(pienin))
+        break
+    luku = float(luku)
+    if suurin is None or luku > suurin:
+        suurin = luku
+    if pienin is None or luku < pienin:
+        pienin = luku
+    

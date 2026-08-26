@@ -1,3 +1,3 @@
-### Minun peli
+# Minun peli
 
-# Hassu seikkailu peli?
+### Hassu seikkailu peli?

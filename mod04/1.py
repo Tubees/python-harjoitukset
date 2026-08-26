@@ -1,6 +1,6 @@
-x = 1
-kerrat = 1000
-while x <= kerrat:
-    if x % 3 == 0:
-        print(x)
-    x += 1
+kuha = float(input("Kuhan pituus: "))
+if kuha < 37:
+    print("kuha on alamittainen, laske se järveen")
+
+else:
+    print("kuha on ok")

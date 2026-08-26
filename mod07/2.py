@@ -1,12 +1,14 @@
-nimet = set()
+import random
+
+
+tahkot = int(input("tahkot: "))
+
+def noppa(max):
+    return random.randint(1, max)
+
 
 while True:
-    nimi = input("Nimi? ")
-    if nimi == "":
-        print(nimet)
+    heitto  = noppa(tahkot)
+    print(heitto)
+    if heitto == tahkot:
         break
-    if nimi in nimet:
-        print("Aiemmin syötetty nimi")
-    else:
-        nimet.add(nimi)
-        print("Uusi nimi")

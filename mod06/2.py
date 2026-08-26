@@ -1,14 +1,9 @@
-import random
-
-
-tahkot = int(input("tahkot: "))
-
-def noppa(max):
-    return random.randint(1, max)
-
-
+list = []
 while True:
-    heitto  = noppa(tahkot)
-    print(heitto)
-    if heitto == tahkot:
+    luku = input("Anna luku: ")
+    if luku == "":
+        list.sort(reverse=True)
+        print(list[:5])
         break
+    luku = float(luku)
+    list.append(luku)

@@ -1,3 +1,11 @@
-monikko = ("talvi", "talvi", "kevät", "kevät", "kevät", "kesä", "kesä", "kesä", "syksy", "syksy", "syksy", "talvi",)
-x = int(input("Kuukausi(1-12): "))
-print(monikko[x -1])
+import random
+
+def noppa():
+    return random.randint(1, 6)
+
+while True:
+    nop = noppa()
+    print(nop)
+    if nop == 6:
+        break
+
