@@ -1,3 +1,3 @@
-# Minun peli
+##Hassu peli
 
-### Hassu seikkailu peli?
+Tuomas Hyvönen
