@@ -26,13 +26,13 @@ if ikä < 12:
     quit()
 else:
     while True:
-        print("\nHei " + nimi + "!\n1. Aloita Peli\n2. Listaa esineet\n")
-        valinta = input("Valitse toiminto(1-2) tai syötä 'lopeta': ")
+        print("\nHei " + nimi + "!\n1. Aloita Peli\n2. Listaa esineet\n3. Lopeta")
+        valinta = input("Valitse toiminto(1-3): ")
         if valinta == "1":
             aloita()
         elif valinta == "2":
             listaa()
-        elif valinta == "lopeta":
+        elif valinta == "3":
             lopeta()
 
 
