@@ -1,0 +1,4 @@
+#Peli toimii syottamalla numeroita 1-9 komentoriviin. 
+#aloita luomalla tai lataamalla kayttaja
+
+#Pelissa tehtavasi on loytaa esine jonka avulla pystyt edeta seuraavaan huoneeseeen.

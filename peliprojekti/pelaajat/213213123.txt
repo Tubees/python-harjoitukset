@@ -1,0 +1,2 @@
+Nimi: 213213123
+Sijainti: <__main__.huone object at 0x0000026E5277E510>
