@@ -31,7 +31,7 @@ Tarvitset tietyn seuraavista esineistä edetäksesi huoneesee:
 ## reitti 1
 ranta -> luola -> rotko -> helikopteri
 
-Tarvitset luolaan taskulampun
+Tarvitset luolaan taskulampun\
 Rotkon ylittämiseen tarrvitset köyden.
 Helikopteriin tarvitset bensaa.
 
