@@ -3,7 +3,7 @@ class pelaaja:
         self.nimi = nimi
         self.huone = huone
         self.esineet = []
-        self.max_esineet = 3
+        self.max_esineet = 2
         self.pisteet = 0
         
 
@@ -14,6 +14,7 @@ class pelaaja:
 
     def keraa_esine(self, esine):
         if len(self.esineet) <= self.max_esineet:
+            print(f"keräsit esineen: {esine.nimi}  ")
             self.esineet.append(esine)
             self.huone.esineet.remove(esine)
         else:
@@ -21,9 +22,9 @@ class pelaaja:
 
     def pudota_esine(self, esine):
         #esine on indeksi listassa
-        print(f"Pudotit esineen: {self.esineet[esine-1].nimi}")
-        self.pelaaja.huone.esineet.append(self.esneet[esine-1])
-        self.esineet.pop(esine-1)
+        print(f"Pudotit esineen: {esine.nimi}")
+        self.huone.esineet.append(esine)
+        self.esineet.remove(esine)
 
 
 class huone:

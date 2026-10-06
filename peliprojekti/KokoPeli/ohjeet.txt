@@ -1,7 +1,7 @@
 Peli toimii syöttamalla numeroita(1-9) komentoriviin.
 
 Haaksirikkouduit saarelle! Ympärrilläsi on erinlaisia esineitä
-Tehtäväsi on löytää pois saarrelta esineiden avulla. Voit kantaa vain 3 esinettä.
+Tehtäväsi on löytää reitto pois saarrelta esineiden avulla. Voit kantaa vain 3 esinettä keralla.
 Huomaat että saarelle on ajautunut myös roskaa.
 Kerää roskat saadaksesi pisteitä
 

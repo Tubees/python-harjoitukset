@@ -13,7 +13,8 @@ def lopeta(pelaaja):
 
 #sulje peli tallentamatta
 def loppu():
-    print("Onneksi olkoon! Peli päättyi.")
+
+    print("Onneksi olkoon! Läpäisit pelin.")
     quit()
 
 
@@ -72,7 +73,6 @@ def päävalikko():
         while True:
             print("1. Uusi pelaaja")
             print("2. Lataa tallennus")
-            print("3. Ohjeet")
             print("9. Lopeta")
             valinta = input("Valitse toiminto(1-9): ")
             if valinta == "1":
@@ -91,12 +91,6 @@ def päävalikko():
                 hahmo = lataa_peli(nimi)
                 aloita(hahmo)
 
-            elif valinta == "3":
-                
-                with open("peliprojekti/ohjeet.txt", "r", encoding="utf-8") as tiedosto:
-                    ohjeet = tiedosto.read()
-                    print(ohjeet)
-                
             elif valinta == "9":
                 quit()
 
@@ -110,6 +104,7 @@ def valinnat():
     print("4. Siirry huoneeseen")
     print("5. Kerää roska")
     print("6. Näytä esineet ja pisteet")
+    print("7. Ohjeet")
     print("9. Lopeta peli")
     print("\n"*2)
 
@@ -151,22 +146,21 @@ def aloita(pelaaja):
                 print(f"{i}. {x.nimi}")
                 i += 1
             valinta = int(input("Valitse esine: "))
-            
-            pelaaja.keraa_esine(pelaaja.huone.esineet[valinta-1])
             valinnat()
+            pelaaja.keraa_esine(pelaaja.huone.esineet[valinta-1])
 
-            print(f"Keräsit esineen: {pelaaja.huone.esineet[valinta-1].nimi}")
 
 
         #Pudota esine
         elif valinta == "3":
-            valinnat()
             i = 1
             for x in pelaaja.esineet:
                 print(f"{i}. {x.nimi}")
                 i += 1
             valinta = int(input("Valitse esine: "))
-            pelaaja.pudota_esine(valinta)
+            valinnat()
+
+            pelaaja.pudota_esine(pelaaja.esineet[valinta-1])
             
 
         #Siirry huoneeseen
@@ -208,6 +202,10 @@ def aloita(pelaaja):
                 esineet.append(i.nimi)
             print(f"Esineesi: {esineet}")
             print(f"Pisteesi: {pelaaja.pisteet}")
+        elif valinta == "7":
+            valinnat()
+            with open("peliprojekti/KokoPeli/ohjeet.txt", "r", encoding="utf-8") as tiedosto:
+                print(tiedosto.read())
             
         #sulje peli ja tallenna
         elif valinta == "9":
@@ -244,14 +242,14 @@ huone2 = huone("luola",  "Etenit luolaan taskulampun avulla", taskulamppu, "Luol
 huone5 = huone("rotko", "Ylitit rotkon köyden avulla", köysi, "Rotkon ylittämiseen tarvitset jotain mistä roikkua", random.randint(1,3))
 
 huone3 = huone("viidakko" , "Etenet viidakossa veitsen avulla", veitsi, "Viidakko on tiheää, tarvitset jotain terävää reitin tekemiseen", random.randint(1,3))
-huone6 = huone("joki", "Yliti joen kumiveneen avulla", kumivene, "Joessa on ", random.randint(1,3))
+huone6 = huone("joki", "Yliti joen kumiveneen avulla", kumivene, "Joessa on kova virtaus tarvitset jotain pysyäksesi pinalla", random.randint(1,3))
 
-huone4 = huone("vuori", "Nousit vuorelle", tikapuut, "Vuorelle kiipeäminen on vaarallista, tarvitset köyden pysyäksesi turvassa.", random.randint(1,3))
-huone7 = huone("vesiputous", "Saavuit vesiputoukselle", laskuvarjo, "Vesiputouksen yli hyppääminen vaatii laskuvarjon.", random.randint(1,3))
+huone4 = huone("vuori", "Kiipesit vuorelle tikapuiden avulla", tikapuut, "Vuori on jysrkkä, tarvitset jotain millä pääset ylös", random.randint(1,3))
+huone7 = huone("vesiputous", "Hypäsit vesiputouksen yli laskuvarjon avulla", laskuvarjo, "Tarvitset jotain millä pääset turvallisesti alas.", random.randint(1,3))
 
 huone8 = huone("helikopteri", "Saavuit helikopterille", bensa, "Helikopterin käyttö vaatii bensaa.", None)
 
-#siirtymät
+#siirtymät      
 #Ensimäisestä huoneesta
 huone1.lisaa_huone(huone2)
 huone1.lisaa_huone(huone3)
